@@ -24,10 +24,10 @@ export const MoviesList = memo(
 		return (
 			<ul
 				className={cn(
-					'flex xl:grid xl:grid-cols-5 gap-y-6 gap-x-10 md:gap-y-16 w-full overflow-x-scroll xl:overflow-auto',
+					'flex lg:grid lg:grid-cols-4 xl:grid-cols-5 gap-y-6 gap-x-10 md:gap-y-16 w-full',
 					className,
 					{
-						['grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4']: cardType === 'genre'
+						['grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3']: cardType === 'genre'
 					}
 				)}
 				onClick={handleClick}>

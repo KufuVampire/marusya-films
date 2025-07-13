@@ -16,8 +16,8 @@ export const Container = ({
 		<div
 			onClick={onClick}
 			className={cn(
-				className,
-				'w-full mx-auto px-[18.5px] lg:px-20 max-w-[var(--container-max-width)]'
+				'w-full mx-auto px-[18.5px] lg:px-20 max-w-[var(--container-max-width)]',
+				className
 			)}>
 			{children}
 		</div>

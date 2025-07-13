@@ -15,16 +15,18 @@ export const Top10MoviesSection = () => {
 
 	return (
 		<Section className='py-8 md:py-8 lg:pt-10 lg:pb-[120px]'>
-			<Container>
+			<Container className='px-0'>
 				<Heading
 					text='Топ 10 фильмов'
-					className='mb-10 lg:mb-16'
+					className='px-[18.5px] lg:px-0'
 				/>
-				<MoviesList
-					isPending={isPending}
-					isSuccess={isSuccess}
-					movies={data}
-				/>
+				<div className='px-[18.5px] py-8 pt-10 lg:pt-16 lg:py-0 lg:px-0 overflow-scroll lg:overflow-visible'>
+					<MoviesList
+						isPending={isPending}
+						isSuccess={isSuccess}
+						movies={data}
+					/>
+				</div>
 			</Container>
 		</Section>
 	);

@@ -5,11 +5,12 @@ export const ProfileFavoritesPage = () => {
 	const { data, isSuccess, isPending } = useFavorites();
 
 	return (
-		<MoviesList
-			movies={data}
-			cardType='favorites'
-			isPending={isPending}
-			isSuccess={isSuccess}
-		/>
+			<MoviesList
+				movies={data}
+				cardType='favorites'
+				isPending={isPending}
+				isSuccess={isSuccess}
+				className='overflow-scroll lg:overflow-visible'
+			/>
 	);
 };
