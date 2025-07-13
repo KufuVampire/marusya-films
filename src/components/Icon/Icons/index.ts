@@ -1,0 +1,14 @@
+export { ArrowRightIcon } from './ArrowRightIcon/ArrowRightIcon';
+export { CrossIcon } from './CrossIcon/CrossIcon';
+export { GenresIcon } from './GenresIcon/GenresIcon';
+export { HeartIcon } from './HeartIcon/HeartIcon';
+export { KeyIcon } from './KeyIcon/KeyIcon';
+export { MailIcon } from './MailIcon/MailIcon';
+export { OkIcon } from './OkIcon/OkIcon';
+export { SearchIcon } from './SearchIcon/SearchIcon';
+export { StarIcon } from './StarIcon/StarIcon';
+export { SwitchArrowsIcon } from './SwitchArrowsIcon/SwitchArrowsIcon';
+export { TelegramIcon } from './TelegramIcon/TelegramIcon';
+export { UserIcon } from './UserIcon/UserIcon';
+export { VkIcon } from './VkIcon/VkIcon';
+export { YoutubeIcon } from './YoutubeIcon/YoutubeIcon';

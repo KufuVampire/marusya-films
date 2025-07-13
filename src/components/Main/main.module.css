@@ -1,0 +1,9 @@
+.main {
+	@apply min-h-[calc(100dvh-(84px*2))];
+}
+
+@media (min-width: 640px) {
+	.main {
+		@apply min-h-[calc(100dvh-(120px*2))];
+	}
+}

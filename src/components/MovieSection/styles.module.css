@@ -1,0 +1,14 @@
+.btn__wrapper {
+	display: grid;
+	gap: 16px;
+	grid-template-areas: "a a a a"
+		"b b c d";
+}
+
+@media (min-width: 768px) {
+	.btn__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+}

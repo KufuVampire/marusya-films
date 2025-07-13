@@ -1,0 +1,8 @@
+
+.label:hover {
+	@apply border-[#B4A9FF]
+}
+
+.label:hover .icon {
+	@apply fill-[#B4A9FF]
+}

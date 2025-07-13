@@ -1,0 +1,12 @@
+.btns {
+	display: grid;
+	gap: 16px;
+	grid-template-areas: "a a a c";
+}
+
+@media (min-width: 768px) {
+	.btns {
+		display: flex;
+		align-items: center;
+	}
+}

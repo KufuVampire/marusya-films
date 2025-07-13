@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --body-bg-color: linear-gradient(180deg, #000000 0%, rgba(39, 135, 245, 0.7) 100%);
+  --active-link: linear-gradient(to right, #DC5DFC 0%, #DC5DFC 100%);
+  --show-search-animation: showSearchDropdown .3s ease alternate;
+
+  --container-max-width: 1440px;
+}
+
+@theme {
+  --shadow-card: 0px 0px 80px 0px rgba(255, 255, 255, .33);
+  --border-card: 1px solid rgba(255, 255, 255, .25);
+}
+
+@layer base {
+  h1 {
+    font-size: initial;
+    font-weight: initial;
+    margin: 0;
+  }
+}
+
+@layer utilities {
+  .border-card {
+    border: var(--border-card);
+  }
+}
+
+
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #000;
+  min-height: 100vh;
+  background: var(--body-bg-color);
+}
+
+@keyframes showSearchDropdown {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
