@@ -41,7 +41,7 @@ export const GenresPage = () => {
 										<div className='w-full h-full max-h-[220px]'>
 											<img
 												className='w-full h-full'
-												src={`/${genre}.jpg`}
+												src={`/${genre}.webp`}
 												alt={genre}
 											/>
 										</div>
