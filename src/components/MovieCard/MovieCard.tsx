@@ -1,12 +1,12 @@
 import { memo } from 'react';
 import { Link } from 'react-router';
 
-import { Icon } from '../Icon/Icon';
-
-import styles from './styles.module.css';
+import { Icon } from '@/components';
 import { PAGE_ROUTES } from '@/config';
 import type { MovieCardType, MovieDto } from '@/types';
 import { cn } from '@/utils';
+
+import styles from './styles.module.css';
 
 interface Props {
 	movie: MovieDto;

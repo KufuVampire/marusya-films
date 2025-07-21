@@ -2,7 +2,11 @@ import { useMutation } from '@tanstack/react-query';
 import { useEffect } from 'react';
 import { type SubmitHandler, useForm } from 'react-hook-form';
 
-import { setAuthFormOpen, setRegistrationSuccessFormOpen, toggleAuthForm } from '@/store/slices';
+import {
+	setAuthFormOpen,
+	setRegistrationSuccessFormOpen,
+	toggleAuthForm,
+} from '@/store/slices';
 
 import { createUser } from '@/api';
 import { Button, FormField } from '@/components';
@@ -21,7 +25,7 @@ export const RegisterForm = () => {
 		setError,
 		reset,
 		formState: { errors },
-	} = useForm<IInputs>();
+	} = useForm<IInputs>({ mode: 'onChange' });
 
 	const { mutate } = useMutation(
 		{
@@ -30,7 +34,7 @@ export const RegisterForm = () => {
 			onSuccess() {
 				reset();
 				dispatch(setAuthFormOpen(false));
-				dispatch(setRegistrationSuccessFormOpen(true))
+				dispatch(setRegistrationSuccessFormOpen(true));
 			},
 		},
 		queryClient
@@ -60,16 +64,20 @@ export const RegisterForm = () => {
 			onSubmit={handleSubmit(onSubmit)}>
 			<h2 className='text-2xl leading-8 font-bold text-black'>Регистрация</h2>
 			<div className='flex flex-col gap-y-3 w-full'>
-				{REGISTER_INPUTS.map((input, i) => (
+				{REGISTER_INPUTS.map((input) => (
 					<FormField
-						key={i}
+						key={input.name}
 						type={input.type}
-						name={input.name}
 						iconName={input.iconName}
 						placeholder={input.placeholder}
-						required={input.required}
-						register={register}
-						errors={errors}
+						{...register(input.name, {
+							required: input.required,
+							minLength: {
+								value: 4,
+								message: 'Min length should be at least 4 characters',
+							},
+						})}
+						error={errors[input.name]}
 					/>
 				))}
 			</div>
@@ -79,12 +87,13 @@ export const RegisterForm = () => {
 				className='w-full'>
 				Создать аккаунт
 			</Button>
-			<button
+			<Button
+				variant='clear'
 				type='button'
-				className='text-lg text-black leading-6 font-bold cursor-pointer w-full'
+				className='text-lg text-black leading-6 font-bold cursor-pointer w-full p-0'
 				onClick={() => dispatch(toggleAuthForm())}>
 				У меня есть пароль
-			</button>
+			</Button>
 		</form>
 	);
 };

@@ -1,10 +1,7 @@
-'use client';
-
 import { match } from 'path-to-regexp';
 import { useLocation } from 'react-router';
 
-import { MenuItem } from '../MenuItem/MenuItem';
-
+import { MenuItem } from '@/components';
 import type { IMenuItem } from '@/types';
 import { cn } from '@/utils';
 

@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router';
 
-import { Icon } from '../Icon/Icon';
-
+import { Icon } from '@/components';
 import type { IMenuItem } from '@/types';
 import { cn } from '@/utils';
 

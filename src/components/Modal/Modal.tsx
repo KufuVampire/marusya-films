@@ -27,9 +27,10 @@ export const Modal = ({
 		<div
 			onClick={handleClick}
 			className={cn(
-				'bg-[rgba(0,0,0,.5)] fixed inset-0 flex items-center justify-center z-10 scale-0 opacity-0 transition-all', {
-				['scale-100 opacity-100']: isOpen,
-			},
+				'bg-[rgba(0,0,0,.5)] fixed inset-0 flex items-center justify-center z-10 scale-0 opacity-0 transition-all',
+				{
+					['scale-100 opacity-100']: isOpen,
+				},
 				className
 			)}>
 			<div

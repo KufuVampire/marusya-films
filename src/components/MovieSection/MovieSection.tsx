@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 
 import { setVideo, setVideoOpen } from '@/store/slices';
 
-import styles from './styles.module.css';
 import {
 	Button,
 	Container,
@@ -20,6 +19,8 @@ import { PAGE_ROUTES } from '@/config';
 import { useAppDispatch } from '@/hooks';
 import type { MovieDto, Video } from '@/types';
 import { cn, formatRuntime } from '@/utils';
+
+import styles from './styles.module.css';
 
 interface Props {
 	page?: 'main' | 'movie';

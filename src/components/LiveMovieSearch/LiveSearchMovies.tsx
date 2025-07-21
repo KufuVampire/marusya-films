@@ -1,12 +1,12 @@
 import type { Dispatch, SetStateAction } from 'react';
 import { Link } from 'react-router';
 
-import { Rating } from '../Rating/Rating';
-
-import styles from './styles.module.css';
+import { Rating } from '@/components';
 import { PAGE_ROUTES } from '@/config';
 import type { MovieDto } from '@/types';
 import { cn, formatRuntime } from '@/utils';
+
+import styles from './styles.module.css';
 
 interface Props {
 	data: MovieDto[];

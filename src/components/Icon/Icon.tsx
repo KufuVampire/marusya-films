@@ -1,5 +1,7 @@
 import type { SVGProps } from 'react';
 
+import type { IconTypes } from '@/types';
+
 import {
 	ArrowRightIcon,
 	CrossIcon,
@@ -16,7 +18,6 @@ import {
 	VkIcon,
 	YoutubeIcon,
 } from './Icons';
-import type { IconTypes } from '@/types';
 
 interface Props extends SVGProps<SVGSVGElement> {
 	name: IconTypes;

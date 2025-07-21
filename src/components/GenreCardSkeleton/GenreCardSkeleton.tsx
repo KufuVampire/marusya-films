@@ -1,4 +1,4 @@
-import { Heading } from '../Heading/Heading';
+import { Heading } from '@/components';
 
 export const GenreCardSkeleton = () => {
 	return (
