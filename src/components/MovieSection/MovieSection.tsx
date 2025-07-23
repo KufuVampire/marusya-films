@@ -118,7 +118,7 @@ export const MovieSection = ({
 				<img
 					src={data.posterUrl}
 					alt={data.title}
-					className='rounded-2xl lg:max-w-[680px] max-h-[234px] sm:max-h-[300px] md:max-h-[400px] lg:max-h-[552px] w-full h-full bg-[#393b3c] order-1 lg:order-2'
+					className='rounded-2xl min-h-[260px] lg:max-w-[680px] max-h-[234px] sm:max-h-[300px] md:max-h-[400px] lg:max-h-[552px] w-full h-full bg-[#393b3c] order-1 lg:order-2'
 				/>
 			</Container>
 		</Section>

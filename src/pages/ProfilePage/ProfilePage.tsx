@@ -32,7 +32,7 @@ export const ProfilePage = () => {
 
 	return (
 		<Main>
-			<Section className='pb-10 md:pb-[120px]'>
+			<Section className='pb-10 md:pb-[120px] flex flex-col items-start'>
 				<Container className='flex flex-col items-start gap-y-10 md:gap-y-16'>
 					<Heading
 						As='h1'
@@ -46,8 +46,8 @@ export const ProfilePage = () => {
 						items={ADAPTIVE_PROFILE_NAV_ITEMS}
 						className='lg:hidden'
 					/>
-					<Outlet />
 				</Container>
+				<Outlet />
 			</Section>
 		</Main>
 	);
