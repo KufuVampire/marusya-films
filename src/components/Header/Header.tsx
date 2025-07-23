@@ -3,13 +3,14 @@ import { Link } from 'react-router';
 
 import { setAuthFormOpen } from '@/store/slices';
 
-import { Button } from '../Button/Button';
-import { Container } from '../Container/Container';
-import { Icon } from '../Icon/Icon';
-import { Loader } from '../Loader/Loader';
-import { Menu } from '../Menu/Menu';
-import { MovieSearch } from '../MovieSearch/MovieSearch';
-
+import {
+	Button,
+	Container,
+	Icon,
+	Loader,
+	Menu,
+	MovieSearch,
+} from '@/components';
 import { PAGE_ROUTES } from '@/config';
 import { MAIN_NAV_ITEMS } from '@/consts';
 import { useAppDispatch } from '@/hooks';
@@ -72,12 +73,13 @@ export const Header = ({ user, isPending, isSuccess }: Props) => {
 
 				<Container
 					onClick={handleClickOutside}
-					className={cn('fixed hidden w-full inset-0 py-4 bg-[rgba(0,0,0,.5)]', {
-						['block']: isSearchOpen,
-					})}>
-					<MovieSearch
-						ref={searchRef}
-					/>
+					className={cn(
+						'fixed hidden w-full inset-0 py-4 bg-[rgba(0,0,0,.5)]',
+						{
+							['block']: isSearchOpen,
+						}
+					)}>
+					<MovieSearch ref={searchRef} />
 				</Container>
 
 				<nav className='flex items-center lg:hidden'>

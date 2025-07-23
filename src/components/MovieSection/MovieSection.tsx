@@ -6,7 +6,6 @@ import { Link } from 'react-router';
 
 import { setVideo, setVideoOpen } from '@/store/slices';
 
-import styles from './styles.module.css';
 import {
 	Button,
 	Container,
@@ -20,6 +19,8 @@ import { PAGE_ROUTES } from '@/config';
 import { useAppDispatch } from '@/hooks';
 import type { MovieDto, Video } from '@/types';
 import { cn, formatRuntime } from '@/utils';
+
+import styles from './styles.module.css';
 
 interface Props {
 	page?: 'main' | 'movie';
@@ -117,7 +118,7 @@ export const MovieSection = ({
 				<img
 					src={data.posterUrl}
 					alt={data.title}
-					className='rounded-2xl lg:max-w-[680px] max-h-[234px] sm:max-h-[300px] md:max-h-[400px] lg:max-h-[552px] w-full h-full bg-[#393b3c] order-1 lg:order-2'
+					className='rounded-2xl min-h-[260px] lg:max-w-[680px] max-h-[234px] sm:max-h-[300px] md:max-h-[400px] lg:max-h-[552px] w-full h-full bg-[#393b3c] order-1 lg:order-2'
 				/>
 			</Container>
 		</Section>

@@ -1,8 +1,7 @@
 import { useMutation } from '@tanstack/react-query';
 
-import { Button } from '../Button/Button';
-
 import { logout } from '@/api';
+import { Button } from '@/components';
 import { queryClient } from '@/config';
 
 export const LogoutButton = () => {

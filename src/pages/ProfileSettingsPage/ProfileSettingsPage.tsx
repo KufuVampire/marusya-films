@@ -1,11 +1,11 @@
-import { Icon, LogoutButton } from '@/components';
+import { Container, Icon, LogoutButton } from '@/components';
 import { useAppSelector } from '@/hooks';
 
 export const ProfileSettingsPage = () => {
 	const { user } = useAppSelector((state) => state.user);
 
 	return (
-		<>
+		<Container className='flex flex-col lg:items-start gap-y-10 pt-10 lg:pt-16'>
 			<ul className='flex flex-col gap-y-10'>
 				<li className='flex items-center gap-x-4'>
 					<div className='w-15 h-15 p-[14px] flex items-center justify-center rounded-full bg-[#8d929b]'>
@@ -35,6 +35,6 @@ export const ProfileSettingsPage = () => {
 				</li>
 			</ul>
 			<LogoutButton />
-		</>
+		</Container>
 	);
 };

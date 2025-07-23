@@ -20,7 +20,7 @@ export const LoginForm = () => {
 		reset,
 		handleSubmit,
 		formState: { errors },
-	} = useForm<IInputs>();
+	} = useForm<IInputs>({ mode: 'onChange' });
 
 	const { mutate } = useMutation(
 		{
@@ -56,12 +56,10 @@ export const LoginForm = () => {
 					<FormField
 						key={i}
 						type={input.type}
-						name={input.name}
 						iconName={input.iconName}
 						placeholder={input.placeholder}
-						required={input.required}
-						register={register}
-						errors={errors}
+						{...register(input.name, { required: input.required })}
+						error={errors[input.name]}
 					/>
 				))}
 			</div>

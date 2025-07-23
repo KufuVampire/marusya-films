@@ -11,10 +11,11 @@
 	"singleAttributePerLine": true,
 	"importOrder": [
 		"<THIRD_PARTY_MODULES>",
+
 		"^@/screens/(.*)$",
-		"^@/entities/(.*)$",
-		"^@/features/(.*)$",
 		"^@/widgets/(.*)$",
+		"^@/features/(.*)$",
+		"^@/entities/(.*)$",
 		"^@/shared/(.*)$",
 		"^@/api/(.*)$",
 		"^@/components/(.*)$",
@@ -24,10 +25,12 @@
 		"^@/settings/(.*)$",
 		"^@/store/(.*)$",
 		"^@/utils/(.*)$",
-		"^../(.*)$",
-		"^./(.*)$",
-		"(.scss)$",
-		"(.css)$"
+		"^@/(.*)$", 
+
+		"^../(?!.*\\.(css|scss)$).*",
+		"^./(?!.*\\.(css|scss)$).*",
+
+		".*\\.(scss|css|module\\.scss|module\\.css)$"
 	],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true,

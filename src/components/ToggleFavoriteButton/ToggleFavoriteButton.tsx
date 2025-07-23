@@ -1,14 +1,12 @@
 import { useMutation } from '@tanstack/react-query';
 import type { MouseEvent } from 'react';
 
-import { useDeleteFavorite } from '@/hooks/useDeleteFavorites';
-
 import { setAuthFormOpen } from '@/store/slices';
 
 import { addToFavorites } from '@/api';
 import { Button, Icon, Loader } from '@/components';
 import { queryClient } from '@/config';
-import { useAppDispatch, useAppSelector } from '@/hooks';
+import { useAppDispatch, useAppSelector, useDeleteFavorite } from '@/hooks';
 import { cn } from '@/utils';
 
 interface Props {

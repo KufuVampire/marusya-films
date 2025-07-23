@@ -1,5 +1,4 @@
-import { Icon } from '../Icon/Icon';
-
+import { Icon } from '@/components';
 import { cn } from '@/utils';
 
 interface Props {

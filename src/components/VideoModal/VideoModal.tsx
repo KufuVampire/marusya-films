@@ -1,7 +1,6 @@
 import { setVideo, setVideoOpen } from '@/store/slices';
 
 import { Modal } from '@/components';
-
 import { useAppDispatch, useAppSelector } from '@/hooks';
 
 export const VideoModal = () => {
@@ -18,8 +17,7 @@ export const VideoModal = () => {
 			cb={handleClick}
 			isOpen={isVideoOpen}
 			wrapperClassName='max-w-[1104px]'
-			className='bg-black sm:bg-[rgba(0,0,0,.5)]'
-			>
+			className='bg-black sm:bg-[rgba(0,0,0,.5)]'>
 			<div className='bg-[#393b3c] sm:min-h-[540px] max-w-[960px] w-full border border-[rgba(255,255,255,.5)]'>
 				{video.id && (
 					<iframe

@@ -51,14 +51,14 @@ export const REGISTER_INPUTS: IInputItem[] = [
 		type: 'text',
 		iconName: 'user',
 		name: 'name',
-		required: true,
+		required: false,
 		placeholder: 'Имя',
 	},
 	{
 		type: 'text',
 		iconName: 'user',
 		name: 'surname',
-		required: true,
+		required: false,
 		placeholder: 'Фамилия',
 	},
 	{

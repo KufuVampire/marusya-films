@@ -1,9 +1,9 @@
 import { Link } from 'react-router';
 
+import { PAGE_ROUTES } from '@/config';
+
 import { Container } from '../Container/Container';
 import { Icon } from '../Icon/Icon';
-
-import { PAGE_ROUTES } from '@/config';
 
 type IconTypes = 'ok' | 'telegram' | 'vk' | 'youtube';
 

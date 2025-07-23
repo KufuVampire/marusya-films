@@ -1,9 +1,8 @@
 import { memo } from 'react';
 
-import { useDeleteFavorite } from '@/hooks/useDeleteFavorites';
-
 import { MovieCard, MovieCardSkeleton } from '@/components';
 import { CARDS_PER_PAGE } from '@/consts';
+import { useDeleteFavorite } from '@/hooks';
 import type { MovieCardType, MovieDto } from '@/types';
 import { cn } from '@/utils';
 
@@ -27,7 +26,8 @@ export const MoviesList = memo(
 					'flex lg:grid lg:grid-cols-4 xl:grid-cols-5 gap-y-6 gap-x-10 md:gap-y-16 w-full',
 					className,
 					{
-						['grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3']: cardType === 'genre'
+						['grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3']:
+							cardType === 'genre',
 					}
 				)}
 				onClick={handleClick}>

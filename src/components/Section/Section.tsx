@@ -7,5 +7,9 @@ interface Props {
 }
 
 export const Section = ({ children, className }: PropsWithChildren<Props>) => {
-	return <section className={cn('pt-4 pb-10 md:pt-16 md:pb-40', className)}>{children}</section>;
+	return (
+		<section className={cn('pt-4 pb-10 md:pt-16 md:pb-40', className)}>
+			{children}
+		</section>
+	);
 };

@@ -1,12 +1,12 @@
 import { memo } from 'react';
 import { Link } from 'react-router';
 
-import { Icon } from '../Icon/Icon';
-
-import styles from './styles.module.css';
+import { Icon } from '@/components';
 import { PAGE_ROUTES } from '@/config';
 import type { MovieCardType, MovieDto } from '@/types';
 import { cn } from '@/utils';
+
+import styles from './styles.module.css';
 
 interface Props {
 	movie: MovieDto;
@@ -19,7 +19,7 @@ export const MovieCard = memo(({ movie, type, className, number }: Props) => {
 	return (
 		<li
 			className={cn(
-				'relative bg-[#3c3c3c] md:max-w-[224px] w-full min-h-[336px] shadow-card rounded-2xl border-card shrink-0',
+				'relative bg-[#3c3c3c] min-w-[224px] min-h-[336px] shadow-card rounded-2xl border-card',
 				styles.item,
 				className
 			)}>
@@ -29,13 +29,13 @@ export const MovieCard = memo(({ movie, type, className, number }: Props) => {
 				<img
 					src={movie.posterUrl}
 					alt={movie.title}
-					className='w-full h-full rounded-2xl'
+					className='w-full rounded-2xl'
 				/>
 			</Link>
 			{type === 'favorites' && (
 				<button
 					className={cn(
-						'flex items-center justify-center absolute -top-5 -right-5 bg-white rounded-full px-2 py-2 opacity-0 transition-opacity',
+						'flex items-center justify-center absolute -top-5 -right-5 bg-white rounded-full px-2 py-2 opacity-100 lg:opacity-0 transition-opacity',
 						styles.close__btn
 					)}
 					data-id={movie.id}>
